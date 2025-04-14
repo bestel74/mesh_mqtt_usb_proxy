@@ -1,0 +1,11 @@
+Description=Meshtastic MQTT USB Proxy
+After=network.target
+
+[Service]
+ExecStart=python ./mqtt_proxy.py
+WorkingDirectory=/home/user_xxx/mesh_mqtt_usb_proxy/
+Restart=always
+User=user_xxx
+
+[Install]
+WantedBy=multi-user.target
